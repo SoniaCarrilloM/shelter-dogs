@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+        border: solid white;
+        border-radius: 30px;
+      }
+
+      .image-gallery {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 300px 300px 300px;
+        grid-gap: 30px;
+        transition: all 150ms ease-in-out;
+        margin-top: 40px;
+      }
+
+      h1 {
+        background: rgba(255, 255, 255, 0.6);
+        text-align: center;
+        color: purple;
+        margin: 50px 50px;
+        padding: 15px;
+        border-radius: 30px;
+        font-size: 52px;
+      }
+
+      .box {
+        background: red;
+        color: blue;
+        opacity: 60px;
+        background-size: cover;
+        border-radius: 30px;
+      }
+
+      .theme-button {
+        background: pink;
+        color: purple;
+        font-size: 16px;
+        font-family: "Cerebri Sans";
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 50px;
+        border: solid;
+        border-color: aqua;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+        display: block;
+        margin: 0 auto;
+      }
+      .theme-button:hover {
+        background: aqua;
+        border: none;
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+      .black {
+        background: pink;
+      }
+
+      .black button {
+        background: white;
+        color: black;
+        border: solid;
+        border-color: purple;
+      }
+
+      .container {
+        border-radius: 20px;
+        padding: 30px;
+      }
+
+      p {
+        display: block;
+        border: solid pink;
+        border-radius: 10px;
+        padding: 30px;
+        line-height: 2;
+        font-size: larger;
+        font-weight: 200px;
+      }
+
+      .dog:hover {
+        filter: contrast(80%);
+        transform: scale (1.1);
+      }
+      .dark {
+        background: #ff007b;
+        color: white;
+      }
+      .dark .container {
+        background: radial-gradient(
+          849px at 0.9% 2.8%,
+          rgb(255, 157, 255) 0%,
+          rgb(255, 102, 142) 43.4%,
+          rgb(255, 31, 56) 83.1%
+        );
+      }
+
+      .dark a {
+        color: plum;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Street Dog Passion</h1>
+
+    <div class="container">
+      <button class="theme-button">💗Love for Dogs Theme💗</button>
+
+      <div class="image-gallery">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/868/original/Screenshot_20231124_201634_WhatsApp.jpg?1700853505"
+          alt="Lila"
+          class="dog"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/865/original/received_347880689636292.jpeg?1700851670"
+          alt="Nata"
+          class="dog"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/552/original/20201226_140915.jpg?1708001359"
+          alt;="Kiki"
+          class="dog"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/549/original/20200814_163402.jpg?1708001260"
+          alt="Mima"
+          class="dog"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/550/original/20200813_221121.jpg?1708001274"
+          alt="Toga"
+          class="dog"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/555/original/20210120_180321.jpg?1708001626"
+          alt;="view with part"
+          class="dog"
+        />
+      </div>
+      <p>
+        I have many passions, to be honest. But none, absolutely none beats my
+        passion for dogs. And specifically: shelter dogs. Those thankful furry
+        souls that know what it is to have to shelter from the cold and rain,
+        from the snow and thunder, and yes, from the sticks and stones, kicks
+        and whips many villagers in some countries treat them to.
+        <br />
+        Together with my husband, we have adopted quite a bunch of them and they
+        enlighten our home with joy. We strongly advice people to adopt not only
+        one dog more more than one, and kindly suggest to take as many tiny ones
+        as your sofa can hold because the tiny ones are very easy to take care
+        of, and, they are the ones that suffer the most on the streets. If you
+        want to adopt a furry friend, click here:
+        <a class="link" href="https://www.helpeenhond.nl/" target="_blank"
+          >Stichting Help een Hond</a
+        >
+      </p>
+    </div>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+
+    <footer>
+      Coded with 💜 by
+      <a href="https://www.sonialeatarde.com" target="_blank">Sonia Carrillo</a>
+    </footer>
+  </body>
+</html>
